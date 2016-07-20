@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueMoment from 'vue-moment'
 import App from './App'
 
 // Components
@@ -11,9 +12,11 @@ import Home from './containers/Home'
 import Travel from './containers/Travel'
 import Step from './containers/Step'
 
-// Routing
+// Modules
 Vue.use(VueRouter)
+Vue.use(VueMoment)
 
+// Routing
 var router = new VueRouter()
 
 router.map({

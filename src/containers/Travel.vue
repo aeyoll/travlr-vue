@@ -1,7 +1,7 @@
 <template>
   <sidebar :name="name">
     <div class="details">
-      <p>Du {{ from_date }} au {{ to_date }}</p>
+      <p>Du {{ from_date | moment "dddd Do MMMM YYYY" }} au {{ to_date | moment "dddd Do MMMM YYYY" }}</p>
     </div>
     <step-list :steps="steps"></step-list>
   </sidebar>
