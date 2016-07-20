@@ -12,9 +12,13 @@ import Home from './containers/Home'
 import Travel from './containers/Travel'
 import Step from './containers/Step'
 
+// Dates
+import moment from 'moment'
+moment.locale(navigator.language || navigator.userLanguage)
+
 // Modules
 Vue.use(VueRouter)
-Vue.use(VueMoment)
+Vue.use(VueMoment, { 'moment': moment })
 
 // Routing
 var router = new VueRouter()
