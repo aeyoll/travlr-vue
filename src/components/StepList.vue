@@ -4,7 +4,7 @@
       <div class="description">{{ step.description }}</div>
       <div class="date">{{ step.date }}</div>
       <div class="address">{{ step.address }}</div>
-    </li >
+    </li>
   </ul>
 </template>
 
