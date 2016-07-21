@@ -4,6 +4,18 @@
   </div>
 </template>
 
+<script>
+  import store from './vuex/store'
+  import { getAllTravels } from './vuex/actions'
+
+  getAllTravels(store)
+
+  export default {
+    name: 'App',
+    store: store
+  }
+</script>
+
 <style lang="scss">
 #app {
   bottom: 0;
