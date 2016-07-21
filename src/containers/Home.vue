@@ -1,10 +1,6 @@
 <template>
   <sidebar name="Travlr">
-    <ul class="travels">
-      <li v-for="travel in travels" class="travel">
-        <div class="name">{{ travel.name }}</div>
-      </li>
-    </ul>
+    <travel-list :travels="travels"></travel-list>
   </sidebar>
 
   <content>
@@ -15,6 +11,7 @@
 <script>
 import Content from '../components/Content'
 import Sidebar from '../components/Sidebar'
+import TravelList from '../components/TravelList'
 
 import { getTravels } from '../vuex/getters'
 
@@ -26,7 +23,8 @@ export default {
   },
   components: {
     Content,
-    Sidebar
+    Sidebar,
+    TravelList
   }
 }
 </script>
