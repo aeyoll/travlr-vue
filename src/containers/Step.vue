@@ -1,34 +1,39 @@
 <template>
-  <sidebar :name="travel.name">
+  <sidebar>
     <div class="details">
       <p>Du {{ travel.from_date | moment "dddd Do MMMM YYYY" }} au {{ travel.to_date | moment "dddd Do MMMM YYYY" }}</p>
     </div>
     <step-list :steps="travel.steps"></step-list>
   </sidebar>
 
-  <content>
-    <div class="step">
-      <map
-        :center.sync="step.map.center"
-        :zoom.sync="step.map.zoom"
-      >
-        <marker
-          v-for="m in step.map.markers"
-          :position.sync="m.position"
-          :clickable.sync="m.clickable"
-          :draggable.sync="m.draggable"
-          @g-click="center=m.position"
-        ></marker>
-      </map>
-      <h1>{{ step.name }}</h1>
-      <small>{{ step.date }}</small>
-      <p>{{ step.address }}</p>
-    </div>
-  </content>
+  <div class="l-content">
+    <navbar>{{ travel.name }}</navbar>
+
+    <content>
+      <div class="step">
+        <map
+          :center.sync="step.map.center"
+          :zoom.sync="step.map.zoom"
+        >
+          <marker
+            v-for="m in step.map.markers"
+            :position.sync="m.position"
+            :clickable.sync="m.clickable"
+            :draggable.sync="m.draggable"
+            @g-click="center=m.position"
+          ></marker>
+        </map>
+        <h1>{{ step.name }}</h1>
+        <small>{{ step.date | moment "dddd Do MMMM YYYY" }}</small>
+        <p>{{ step.address }}</p>
+      </div>
+    </content>
+  </div>
 </template>
 
 <script>
 import Content from '../components/Content'
+import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import StepList from '../components/StepList'
 
@@ -39,6 +44,7 @@ load('AIzaSyDYjPyLNURIyfIeoQsXPBbu_9b8dmo5g4c')
 export default {
   components: {
     Content,
+    Navbar,
     Sidebar,
     StepList,
     Map,

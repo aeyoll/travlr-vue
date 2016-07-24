@@ -32,7 +32,7 @@ router.map({
     component: Travel,
     name: 'travel'
   },
-  '/step': {
+  '/step/:stepId': {
     component: Step,
     name: 'step'
   }

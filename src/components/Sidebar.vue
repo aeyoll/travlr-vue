@@ -1,7 +1,7 @@
 <template>
   <div class="l-sidebar">
     <div class="header">
-      <h1 class="name"><a href="#" v-link="{name: 'home'}">Travlr</a></h1>
+      <h1 class="name"><a href="#" v-link="{ name: 'home' }">Travlr</a></h1>
     </div>
 
     <div class="content">
@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $green-dark: #25ce98;
 $green-light: #24ab80;
 
@@ -28,23 +28,29 @@ $sidebar-background: #2b2e2e;
     color: currentColor;
     text-decoration: none;
   }
-}
 
-.header {
-  background: $green-dark;
-}
+  .header {
+    background: $green-dark;
+  }
 
-.name {
-  font-size: 22px;
-  margin: 0 ;
+  .name {
+    font-size: 22px;
+    margin: 0;
 
-  a {
-    display: block;
+    a {
+      display: block;
+      padding: 1em 30px;
+    }
+  }
+
+  .content {
+    padding: 0 30px;
+  }
+
+  .details {
+    background: $green-light;
+    margin: 0 -30px;
     padding: 1em 30px;
   }
-}
-
-.content {
-  padding: 0 30px;
 }
 </style>

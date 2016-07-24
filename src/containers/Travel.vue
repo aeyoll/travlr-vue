@@ -1,5 +1,5 @@
 <template>
-  <sidebar :name="name">
+  <sidebar>
     <div class="details">
       <p>Du {{ from_date | moment "dddd Do MMMM YYYY" }} au {{ to_date | moment "dddd Do MMMM YYYY" }}</p>
     </div>
@@ -53,11 +53,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$green-light: #24ab80;
-
-.details {
-  background: $green-light;
-  margin: 0 -30px;
-  padding: 1em 30px;
-}
 </style>

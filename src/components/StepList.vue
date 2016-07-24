@@ -1,9 +1,11 @@
 <template>
   <ul class="steps">
     <li v-for="step in steps" class="step">
-      <div class="description">{{ step.description }}</div>
-      <div class="date">{{ step.date | moment "dddd Do MMMM YYYY" }}</div>
-      <div class="address">{{ step.address }}</div>
+      <a href="#" v-link="{ name: 'step', params: { stepId: step.id } }">
+        <div class="description">{{ step.description }}</div>
+        <div class="date">{{ step.date | moment "dddd Do MMMM YYYY" }}</div>
+        <div class="address">{{ step.address }}</div>
+      </a>
     </li>
   </ul>
 </template>
@@ -64,7 +66,6 @@ export default {
   a {
     color: currentColor;
     display: block;
-    padding: 0 30px 0 60px;
     text-decoration: none;
   }
 }
