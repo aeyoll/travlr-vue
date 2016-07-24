@@ -1,8 +1,11 @@
 <template>
   <div class="title">Mes voyages</div>
-  <ul class="travels">
-    <li v-for="travel in travels" class="travel">
+  <ul class="items">
+    <li v-for="travel in travels" class="item">
       <a href="#" v-link="{ name: 'travel', params: { travelId: travel.id } }">{{ travel.name }}</a>
+    </li>
+    <li class="item">
+      <a href="#" v-link="{ name: 'travelNew' }">Ajouter un voyage</a>
     </li>
   </ul>
 </template>
@@ -20,14 +23,18 @@ export default {
   text-transform: uppercase;
 }
 
-.travels {
+.items {
   list-style: none;
-  margin: 0;
+  margin: -1px 0 0;
   padding: 0;
 }
 
-.travel {
-  padding: 1em 0;
+.item {
+  padding: .5em 0;
+
+  &:first-child {
+    margin-top: .5em;
+  }
 
   a {
     color: currentColor;

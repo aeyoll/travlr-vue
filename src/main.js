@@ -10,6 +10,7 @@ Vue.component('sidebar', Sidebar)
 // Containers
 import Home from './containers/Home'
 import Travel from './containers/Travel'
+import TravelNew from './containers/TravelNew'
 import Step from './containers/Step'
 
 // Dates
@@ -31,6 +32,10 @@ router.map({
   '/travel/:travelId': {
     component: Travel,
     name: 'travel'
+  },
+  '/travel/new': {
+    component: TravelNew,
+    name: 'travelNew'
   },
   '/step/:stepId': {
     component: Step,
