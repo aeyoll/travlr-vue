@@ -27,8 +27,9 @@ router.map({
   '/': {
     component: Home
   },
-  '/travel': {
-    component: Travel
+  '/travel/:travelId': {
+    component: Travel,
+    name: 'travel'
   },
   '/step': {
     component: Step
