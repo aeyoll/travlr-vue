@@ -2,7 +2,7 @@
   <ul class="steps">
     <li v-for="step in steps" class="step">
       <div class="description">{{ step.description }}</div>
-      <div class="date">{{ step.date }}</div>
+      <div class="date">{{ step.date | moment "dddd Do MMMM YYYY" }}</div>
       <div class="address">{{ step.address }}</div>
     </li>
   </ul>
@@ -22,9 +22,9 @@ export default {
 }
 
 .step {
-  color: #333;
+  color: #ddd;
   position: relative;
-  padding: 1em 0;
+  padding: 1em 0 1em 40px;
   transition: .2s all ease-in;
 
   &.is-active {
@@ -38,7 +38,7 @@ export default {
     content: '';
     display: block;
     height: 20px;
-    left: 21px;
+    left: 0;
     position: absolute;
     top: calc(50% - 10px);
     width: 20px;
@@ -46,11 +46,11 @@ export default {
   }
 
   &::after {
-    background: #333;
+    background: #666;
     content: '';
     height: 100%;
     display: block;
-    left: 30px;
+    left: 12px;
     position: absolute;
     top: 0;
     width: 3px;
@@ -58,7 +58,7 @@ export default {
   }
 
   &:hover {
-    color: #333;
+    color: #fff;
   }
 
   a {

@@ -17,6 +17,10 @@
 </script>
 
 <style lang="scss">
+body {
+  background: #f1f1f1;
+}
+
 #app {
   bottom: 0;
   font-family: Source Sans Pro, Helvetica, sans-serif;
@@ -33,5 +37,9 @@
 .logo {
   width: 100px;
   height: 100px
+}
+
+.l-content {
+  flex: 1;
 }
 </style>

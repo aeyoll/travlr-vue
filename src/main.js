@@ -25,14 +25,16 @@ var router = new VueRouter()
 
 router.map({
   '/': {
-    component: Home
+    component: Home,
+    name: 'home'
   },
   '/travel/:travelId': {
     component: Travel,
     name: 'travel'
   },
   '/step': {
-    component: Step
+    component: Step,
+    name: 'step'
   }
 })
 

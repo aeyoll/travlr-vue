@@ -4,7 +4,9 @@
   </sidebar>
 
   <content>
-    <h1>Homepage</h1>
+    <h1>Your travel companion</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo blanditiis eligendi temporibus. Quas minima voluptatum eum inventore animi, incidunt sunt illum, itaque alias culpa ex aspernatur minus, qui eaque quo.</p>
   </content>
 </template>
 

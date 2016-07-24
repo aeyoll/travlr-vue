@@ -1,15 +1,14 @@
 <template>
-  <div class="content">
+  <div class="navbar">
     <slot></slot>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.content {
+.navbar {
   background: #fff;
-  flex: 1;
-  margin: 1em auto;
-  max-width: 700px;
+  font-size: 22px;
+  font-weight: 700;
   padding: 1em;
 }
 </style>

@@ -6,22 +6,27 @@
     <step-list :steps="steps"></step-list>
   </sidebar>
 
-  <content>
-    <div class="travel">
-      <h1>{{ name }}</h1>
-    </div>
-  </content>
+  <div class="l-content">
+    <navbar>{{ name }}</navbar>
+
+    <content>
+      <div class="travel">
+      </div>
+    </content>
+  </div>
 </template>
 
 <script>
-import Content from '../components/Content'
 import Sidebar from '../components/Sidebar'
+import Content from '../components/Content'
+import Navbar from '../components/Navbar'
 import StepList from '../components/StepList'
 
 export default {
   components: {
-    Content,
     Sidebar,
+    Content,
+    Navbar,
     StepList
   },
 
